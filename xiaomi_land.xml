@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="kek"
-            fetch="https://github.com/Ubports-Land"
-            revision="halium-7.1" />
-    <remote name="beidl" 
-            fetch="https://github.com/fredldotme" />
-    <remote name="ubp" 
-            fetch="https://github.com/ubports/" revision="halium-7.1" 
-            />
-    <project path="device/xiaomi/land" name="android_device_xiaomi_land-1" remote="kek" />
-    <project path="device/xiaomi/msm8937-common" name="android_device_xiaomi_msm8937-common" remote="kek" />
-    <project path="kernel/xiaomi/GGmsm8937" name="android_kernel_xiaomi_msm8937-1" remote="kek" />
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="kek" />
+    <remote name="kelmes" fetch="https://github.com/kelmes" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <remote name="sony" fetch="https://github.com/sonyxperiadev" />
+    <remote name="nxp" fetch="https://github.com/NXPNFCProject/" />
+    <remote name="mer-hybris" fetch="https://github.com/mer-hybris" />
+    <remote name="peat-psuwit" fetch="https://github.com/peat-psuwit" />
+
+    <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <remove-project path="hardware/qcom/audio" name="Halium/android_hardware_qcom_audio" />
+    <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
+    <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
+    <remove-project path="hardware/qcom/media" name="android_hardware_qcom_media" />
+    <remove-project path="system/core" name="Halium/android_system_core" />
+    <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
+
+
+    <project path="device/sony/kugo" name="device-sony-kugo" revision="n-mr1-ubports" remote="kelmes" />
+    <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
+    <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
+    <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1-ubports" remote="beidl" />
+
+    <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+    <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
+    <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+
+    <project path="hardware/qcom/audio" name="android_hardware_qcom_audio_aosp" groups="qcom,qcom_audio" revision="halium-7.1" remote="beidl" />
+    <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
+    <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="beidl" revision="halium-7.1" />
+
+    <project path="kernel/sony/kugo" name="device-kernel-loire" revision="ubports/LA.UM.5.7.r1" remote="beidl" />
+
+    <project path="device/sony/kugo" name="android_device_xiaomi_land-1" remote="kek" />
+    <project path="device/sony/kugo" name="android_device_xiaomi_msm8937-common" remote="kek" />
+    <project path="vendor/sony" name="proprietary_vendor_xiaomi" remote="kek" />
   <!-- GStreamer Camera Fix Remote-->
     <remote name="peat" fetch="https://github.com/peat-psuwit" />
   <!-- GStreamer Camera Repo -->
