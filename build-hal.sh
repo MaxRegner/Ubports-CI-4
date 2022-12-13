@@ -4,7 +4,7 @@ cd $ANDROID_ROOT
 
 source build/envsetup.sh
 export USE_CCACHE=1
-breakfast $DEVICE
+lunch $DEVICE
 mka mkbootimg
 mka hybris-boot
 mka halium-boot
