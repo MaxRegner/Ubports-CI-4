@@ -4,7 +4,7 @@ cd $ANDROID_ROOT
 
 source build/envsetup.sh
 export USE_CCACHE=1
-lunch $DEVICE
+lunch aosp_f5321-eng
 mka mkbootimg
 mka hybris-boot
 mka halium-boot
